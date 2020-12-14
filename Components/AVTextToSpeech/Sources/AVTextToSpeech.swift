@@ -192,7 +192,7 @@ public class AVTextToSpeech: AimyboxComponent, TextToSpeech {
     private func prepareAudioEngine(_ completion: (Bool)->()) {
         do {
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playback)
+            try audioSession.setCategory(.playAndRecord)
             try audioSession.setMode(.default)
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
             completion(true)

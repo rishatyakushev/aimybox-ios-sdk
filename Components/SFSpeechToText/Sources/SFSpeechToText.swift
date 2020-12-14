@@ -125,7 +125,7 @@ public class SFSpeechToText: AimyboxComponent, SpeechToText {
         // Setup AudioSession for recording
         do {
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.record)
+            try audioSession.setCategory(.playAndRecord)
             try audioSession.setMode(.measurement)
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
